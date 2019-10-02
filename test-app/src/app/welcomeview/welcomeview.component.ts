@@ -10,7 +10,7 @@ export class WelcomeviewComponent implements OnInit {
   slogan: string;
 
   constructor() {
-    this.slogan = 'Jiihaa!! wm anglular app is running..';
+    this.slogan = 'Wmedia´s getting started with Angular';
   }
 
   ngOnInit() {
