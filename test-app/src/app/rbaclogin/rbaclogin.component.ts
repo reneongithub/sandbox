@@ -12,7 +12,7 @@ export class RbacloginComponent implements OnInit {
 
   constructor() {
 
-    this.slogan = "here we create a rbac login";
+    this.slogan = "here we create a rbac login form";
 
   }
 
