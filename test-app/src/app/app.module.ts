@@ -8,6 +8,7 @@ import { WelcomeviewComponent } from './welcomeview/welcomeview.component';
 import { FooterComponent } from './footer/footer.component';
 import { RbacloginComponent } from './rbaclogin/rbaclogin.component';
 import { ErrorComponent } from './error/error.component';
+import { RbacService } from './services/rbac.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ErrorComponent } from './error/error.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    RbacService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
