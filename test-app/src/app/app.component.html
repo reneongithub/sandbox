@@ -1,0 +1,16 @@
+<app-headbanner></app-headbanner>
+
+<div class="content" role="main">
+    <div class="card">
+        <div *ngFor="let ni of navList" style="margin: 10px">
+            <a [routerLink]="ni.url"> {{ni.name}} </a>
+        </div>
+    </div>
+</div> 
+
+<router-outlet></router-outlet>
+
+<!-- <app-welcomeview></app-welcomeview> -->
+
+<app-footer></app-footer>
+
