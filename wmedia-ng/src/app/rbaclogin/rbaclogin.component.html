@@ -3,8 +3,10 @@
         <span>{{ slogan }}</span>
     </div>
 
-        <p>username: <input type="text" [(ngModel)]="userName"></p>
-        <p>password: <input type="text" [(ngModel)]="password"></p>
+        <div class="formbox" style="margin: 15px">
+            <p>username: <input type="text" [(ngModel)]="userName"></p>
+            <p>password: <input type="text" [(ngModel)]="password"></p>
+        </div>
 
         <p>you will login as 
             <span style="color: brown">{{userName}}</span> 
@@ -12,11 +14,12 @@
             <span style="color: brown">{{password}}</span>
         </p>
 
-
-        <div class="card card-small" (click)="login()" tabindex="0">
-            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-    
-          <span>Login</span>
+        <div class="card-container">
+            <div class="card card-small" (click)="login()" tabindex="0">
+                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+        
+            <span>Login</span>
+            </div>
         </div>
 
 </div> 
