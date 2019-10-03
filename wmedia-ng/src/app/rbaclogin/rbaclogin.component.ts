@@ -12,6 +12,9 @@ export class RbacloginComponent implements OnInit {
 
   slogan: string;
 
+  userName: string;
+  password: string;
+
   constructor(rbacService: RbacService) {
 
     this.rbacService = rbacService;
@@ -20,8 +23,25 @@ export class RbacloginComponent implements OnInit {
 
   }
 
+  // ngOnInit correlates to onEnter in vaadin
   ngOnInit() {
-    this.rbacService.login("kuehnemann_wmedia", "kuehnemann_wmedia");
+
+    // lets initialize credencials always new on enter
+    this.userName = "?";
+    this.password = "?";
+
+  }
+
+  login(){
+    this.rbacService.login(
+      this.userName, this.password,
+      (rsp: any) => this.doOnLoginResponse(rsp)
+    );
+  }
+
+
+  doOnLoginResponse(rsp: any){
+    console.log("rbac service did for me:: "+rsp);
   }
 
 }

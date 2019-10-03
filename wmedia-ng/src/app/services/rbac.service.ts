@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class RbacService {
 
   constructor() { }
 
 
-  login(username: string, pass: string)
+  login(username: string, pass: string, cb: (result: any) => any)
   {
-    console.log("user: "+username+" - pass: "+pass);
+    // console.log("user: "+username+" - pass: "+pass);
+
+    cb("logged in for -> user: "+username+" - pass: "+pass);
   }
 
 }
