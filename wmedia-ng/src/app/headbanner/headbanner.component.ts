@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeadbannerComponent implements OnInit {
 
-  constructor() { }
+  slogan: string;
+
+  constructor() {
+    this.slogan = 'Wmedia´s getting started with Angular';
+  }
 
   ngOnInit() {
   }
